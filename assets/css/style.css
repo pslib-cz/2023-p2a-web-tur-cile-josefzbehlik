@@ -64,6 +64,8 @@ figure, h2 {
 .categories__item {
     position: relative;
     color: inherit;
+    border-radius: 1em;
+
 }
 .categories__item-description {
     padding: 1em;
@@ -87,14 +89,15 @@ border-radius: 1em;
 
 .categories__item:hover{
     transition: all 0.5s ease;
+    filter: contrast(1,2) brightness(1.2) saturate(1.2);
     z-index: 10;
     transform: scale(1.1);
     box-shadow: 0 0 8px 2px var(--text-light);
 }
 .categories:has(figure:hover) figure:not(:hover) {
-    filter: brightness(0.5) saturate(0) contrast(1.5);
     filter: saturate(0) blur(0.3em);
-    transition: all 0,7s ease;
+    transform: scale(0.9);
+    transition: all 0.7s ease;
 }
 .categories__item:hover .categories__item-description{
 bottom: 50%;
